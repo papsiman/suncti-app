@@ -4,9 +4,9 @@ const FOOTER = () => {
     return (
       <div className="bg-neutral">
           {/* TOP */}
-          <div className="footer bg-secondary text-white px-4 md:px-32 xl:px-64 py-12">
+          <div className="footer bg-secondary text-white px-4 md:px-32 xl:px-64 py-16 relative overflow-hidden">
             <aside>
-              <Image src="/suncti-logo.png" alt="" width={193} height={72}/>
+              <Image src="/suncti-logo.png" alt="" width={150} height={0}/>
               <p className="max-w-md">
                 SUNCTI TECHNOLOGY INNOVATION CO., LTD.
                 <br />
@@ -30,6 +30,8 @@ const FOOTER = () => {
               <a className="link link-hover">Fax: +662-961-0600</a>
               <a className="link link-hover">E-Mail: Kit@suncti.co.th</a>
             </nav>
+            <div className="absolute -left-28 -top-10 w-56 h-56 mask mask-hexagon-2 bg-primary opacity-20"></div>
+            <div className="absolute right-0 -bottom-20 w-56 h-56 rotate-45 mask mask-squircle bg-primary opacity-20"></div>
           </div>
           {/* BOTTOM */}
           <div className="footer bg-[#18252f] text-neutral-content items-center px-4 md:px-32 xl:px-64 py-4">

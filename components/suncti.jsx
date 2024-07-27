@@ -11,7 +11,7 @@ const SUNCTI = () => {
             <img src="/ab-2.jpg" alt="" className="rounded-lg"/>
           </div>
           <div className="col-span-12 md:col-span-6">
-            <div className="max-w-[500px] flex flex-col gap-4">
+            <div className="max-w-[1200px] flex flex-col gap-4">
               <h4 className="text-xl font-semibold text-primary">Welcom To SUNCTI</h4>
               <h2 className="text-4xl font-semibold">We are trusted business partner</h2>
               <p className="font-medium text-gray-400 indent-10">

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const NAVBAR = () => {
     return (
       <div className="absolute w-full px-8 lg:px-32 mt-10">
@@ -29,72 +31,72 @@ const NAVBAR = () => {
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
                 <li>
-                  <a>Home 1</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
-                  <a>About</a>
+                  <a href="/about">About</a>
                 </li>
                 <li>
                   <a>Product</a>
                   <ul className="p-2">
-                    <li>
-                      <a>Microsoft Team</a>
+                  <li>
+                      <a href="/msteam">Microsoft Team</a>
                     </li>
                     <li>
-                      <a>Audiocodes</a>
+                      <a href="/audiocode">Audiocodes</a>
                     </li>
                     <li>
-                      <a>Paradoxes</a>
+                      <a href="/paradox">Paradoxes</a>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <a>Product Catalog</a>
+                  <a href="/catalog">Product Catalog</a>
                 </li>
                 <li>
-                  <a>Contact</a>
+                  <a href="/contact">Contact</a>
                 </li>
                 <li>
-                  <a>Get A Quote</a>
+                  <a href="/quote">Get A Quote</a>
                 </li>
               </ul>
             </div>
-            <a className="btn btn-ghost text-2xl">SUNCTI</a>
+            <a href="/" className="text-black"><Image src="/suncti-black-logo.png" alt="" width={128} height={0}/></a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <a className="text-lg font-semibold">Home</a>
+                <a href="/" className="text-lg font-semibold">Home</a>
               </li>
               <li>
-                <a className="text-lg font-semibold">About</a>
+                <a href="/about" className="text-lg font-semibold">About</a>
               </li>
               <li>
                 <details>
                   <summary className="text-lg font-semibold">Product</summary>
-                  <ul className="p-2">
+                  <ul className="p-2 w-40 h-32">
                     <li>
-                      <a>Microsoft Team</a>
+                      <a href="/msteam">Microsoft Team</a>
                     </li>
                     <li>
-                      <a>Audiocodes</a>
+                      <a href="/audiocode">Audiocodes</a>
                     </li>
                     <li>
-                      <a>Paradoxes</a>
+                      <a href="/paradox">Paradoxes</a>
                     </li>
                   </ul>
                 </details>
               </li>
               <li>
-                <a className="text-lg font-semibold">Product Catalog</a>
+                <a href="/catalog" className="text-lg font-semibold">Product Catalog</a>
               </li>
               <li>
-                <a className="text-lg font-semibold">Contact</a>
+                <a href="/contact" className="text-lg font-semibold">Contact</a>
               </li>
             </ul>
           </div>
           <div className="navbar-end">
-            <a className="btn btn-secondary hover:btn-primary hover:text-white">
+            <a href="/quote" className="btn btn-secondary hover:btn-primary hover:text-white">
               Get A Quote
             </a>
           </div>

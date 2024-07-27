@@ -5,7 +5,7 @@ const PRICE = () => {
           <h1 className="text-4xl font-semibold">Add your Microsoft Teams plan today</h1>
           <div className="grid grid-cols-12 py-16 gap-8">
             {/* PRICE 1 */}
-            <div className="col-span-12 md:col-span-6 lg:col-span-3 shadow-xl rounded-xl hover:scale-110">
+            <div className="col-span-12 md:col-span-6 xl:col-span-3 shadow-xl rounded-xl hover:scale-110">
               <div className="flex flex-col justify-center items-stretch">
                 <div className="h-12 flex justify-center items-center bg-primary text-white rounded-t-xl">
                   <h4>Bring-your-own calling plan</h4>
@@ -31,7 +31,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Cloud-based phone system
@@ -43,7 +43,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Make and receive voice and video calls over PSTN or
@@ -56,7 +56,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Join calls from a range of devices and seamlessly
@@ -69,7 +69,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Add operator PSTN service with Operator Connect or
@@ -82,7 +82,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Combine mobile calling plans with Operator Connect
@@ -95,7 +95,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">99.999% uptime SLA</span>
                         </label>
@@ -106,7 +106,7 @@ const PRICE = () => {
               </div>
             </div>
             {/* PRICE 2 */}
-            <div className="col-span-12 md:col-span-6 lg:col-span-3 shadow-xl rounded-xl hover:scale-110">
+            <div className="col-span-12 md:col-span-6 xl:col-span-3 shadow-xl rounded-xl hover:scale-110">
               <div className="flex flex-col justify-center items-stretch">
                 <div className="h-12 flex justify-center items-center bg-primary text-white rounded-t-xl">
                   <h4>Pay-as-you-go calling plan</h4>
@@ -133,7 +133,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Cloud-based phone system
@@ -145,7 +145,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Includes phone number with metered outbound calling
@@ -158,7 +158,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Unlimited inbound calling
@@ -170,7 +170,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Call queue, auto attendant, recording,
@@ -183,7 +183,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Unlimited meetings and messaging
@@ -195,7 +195,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             File sharing, tasks, and polling
@@ -207,7 +207,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             10 GB of cloud storage per user
@@ -220,7 +220,7 @@ const PRICE = () => {
               </div>
             </div>
             {/* PRICE 3 */}
-            <div className="col-span-12 md:col-span-6 lg:col-span-3 shadow-xl rounded-xl hover:scale-110">
+            <div className="col-span-12 md:col-span-6 xl:col-span-3 shadow-xl rounded-xl hover:scale-110">
               <div className="flex flex-col justify-center items-stretch">
                 <div className="h-12 flex justify-center items-center bg-primary text-white rounded-t-xl">
                   <h4>Domestic calling plan</h4>
@@ -250,7 +250,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Phone number and PSTN service from Microsoft
@@ -262,7 +262,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Inclusive of domestic calling
@@ -275,7 +275,7 @@ const PRICE = () => {
               </div>
             </div>
             {/* PRICE 4 */}
-            <div className="col-span-12 md:col-span-6 lg:col-span-3 shadow-xl rounded-xl hover:scale-110">
+            <div className="col-span-12 md:col-span-6 xl:col-span-3 shadow-xl rounded-xl hover:scale-110">
               <div className="flex flex-col justify-center items-stretch">
                 <div className="h-12 flex justify-center items-center bg-primary text-white rounded-t-xl">
                   <h4>International calling plan</h4>
@@ -301,7 +301,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Cloud-based phone system
@@ -313,7 +313,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Includes phone number with outbound international
@@ -326,7 +326,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Unlimited inbound calling
@@ -338,7 +338,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Call queue, auto attendant, recording,
@@ -351,7 +351,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             Unlimited meetings and messaging
@@ -363,7 +363,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             File sharing, tasks, and polling
@@ -375,7 +375,7 @@ const PRICE = () => {
                           <input
                             type="checkbox"
                             defaultChecked
-                            className="checkbox checkbox-primary"
+                            className="checkbox checkbox-primary [--chkfg:theme(colors.white)]"
                           />
                           <span className="label-text">
                             10 GB of cloud storage per user

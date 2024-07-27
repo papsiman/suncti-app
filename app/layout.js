@@ -3,6 +3,11 @@ import "./globals.css";
 import COMP_NAVBAR from "@/components/navbar";
 import FOOTER from "@/components/footer";
 
+//Fontawesom setting
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; /* eslint-disable import/first */
+
 const roboto = Roboto({
   weight: ['100','300','400','500','700','900'],
   style: ['normal', 'italic'],
