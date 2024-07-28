@@ -1,3 +1,4 @@
+import MSTEAM from '@/components/msteam'
 import NAVBAR from '@/components/navbar'
 import React from 'react'
 
@@ -18,12 +19,14 @@ export default function MsTeam() {
             </ul>
           </div>
         </div>
-        <div className="absolute top-10 w-full">
+        <div className="absolute w-full">
           <NAVBAR />
         </div>
       </div>
       {/* Content */}
-      <div></div>
+      <div>
+        <MSTEAM />
+      </div>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const NAVBAR = () => {
     return (
-      <div className="absolute w-full px-8 lg:px-32 mt-10">
+      <div className="absolute w-full px-8 lg:px-32 mt-16">
         <div className="navbar bg-base-100 px-10 py-4 rounded-md">
           <div className="navbar-start">
             <div className="dropdown">
@@ -57,23 +57,23 @@ const NAVBAR = () => {
                   <a href="/contact">Contact</a>
                 </li>
                 <li>
-                  <a href="/quote">Get A Quote</a>
+                  <a href="/#contact">Get A Quote</a>
                 </li>
               </ul>
             </div>
-            <a href="/" className="text-black"><Image src="/suncti-black-logo.png" alt="" width={128} height={0}/></a>
+            <a href="/" className="text-black"><Image src="/suncti-black-logo.png" alt="" width={165} height={0}/></a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <a href="/" className="text-lg font-semibold">Home</a>
+                <a href="/" className="text-lg">Home</a>
               </li>
               <li>
-                <a href="/about" className="text-lg font-semibold">About</a>
+                <a href="/about" className="text-lg">About</a>
               </li>
               <li>
                 <details>
-                  <summary className="text-lg font-semibold">Product</summary>
+                  <summary className="text-lg">Product</summary>
                   <ul className="p-2 w-40 h-32">
                     <li>
                       <a href="/msteam">Microsoft Team</a>
@@ -88,15 +88,15 @@ const NAVBAR = () => {
                 </details>
               </li>
               <li>
-                <a href="/catalog" className="text-lg font-semibold">Product Catalog</a>
+                <a href="/catalog" className="text-lg">Product Catalog</a>
               </li>
               <li>
-                <a href="/contact" className="text-lg font-semibold">Contact</a>
+                <a href="/contact" className="text-lg">Contact</a>
               </li>
             </ul>
           </div>
           <div className="navbar-end">
-            <a href="/quote" className="btn btn-secondary hover:btn-primary hover:text-white">
+            <a href="/#contact" className="hidden sm:flex btn btn-primary rounded-3xl px-10 text-white">
               Get A Quote
             </a>
           </div>

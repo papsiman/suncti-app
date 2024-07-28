@@ -188,13 +188,13 @@ const MSTEAM = () => {
   }
 
   return (
-    <div className="pt-32 pb-16 px-12">
+    <div className="pt-12 md:pt-32 pd-8 md:pb-16 px-12">
       <div className="flex flex-col items-center">
-        <h1 className="text-4xl font-semibold">
+        <h1 className="text-2xl md:text-5xl font-semibold">
           Simplified, enterprise-grade calling in Microsoft Teams
         </h1>
         {/* CONTENT */}
-        <div className="max-w-7xl grid grid-cols-12 py-16">
+        <div className="max-w-6xl grid grid-cols-12 py-16 md:py-32 gap-8">
           {/* LEFT */}
           <div className="col-span-12 md:col-span-4">
             <ul className="menu rounded-none p-0">
@@ -329,8 +329,8 @@ const MSTEAM = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 id="Title" className="card-title">Make and answer calls</h2>
-                <p id="Des">Make one-on-one or group calls directly from a chat or use the dial pad to call a phone number.</p>
+                <h2 id="Title" className="card-title">Basic call control</h2>
+                <p id="Des">Connect with your team, customers, and partners with voice and video calls from a Teams chat, the Calls app, or the public switched telephone network (PSTN).</p>
               </div>
             </div>
           </div>

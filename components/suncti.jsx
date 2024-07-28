@@ -1,7 +1,9 @@
+import Link from "next/link";
+
 const SUNCTI = () => {
     return (
       <div>
-        <div className="grid grid-cols-12 justify-center items-center bg-white shadow-xl rounded-lg py-20 px-20 gap-8 hover:bg-secondary hover:text-white"
+        <div className="group grid grid-cols-12 justify-center items-center bg-white shadow-xl rounded-lg py-20 px-20 gap-8 hover:bg-secondary hover:text-white"
         style={{
           backgroundImage: `url(${"/bg2.png"})`,
           backgroundSize: "cover",
@@ -12,8 +14,8 @@ const SUNCTI = () => {
           </div>
           <div className="col-span-12 md:col-span-6">
             <div className="max-w-[1200px] flex flex-col gap-4">
-              <h4 className="text-xl font-semibold text-primary">Welcom To SUNCTI</h4>
-              <h2 className="text-4xl font-semibold">We are trusted business partner</h2>
+              <h4 className="text-xl font-semibold group-hover:text-primary">Welcom To SUNCTI</h4>
+              <h2 className="text-2xl md:text-4xl font-semibold">We are trusted business partner</h2>
               <p className="font-medium text-gray-400 indent-10">
                 SunCTI is a Microsoft Communications & Cloud partner. We offers
                 Consultants, Implement and Operate of the Skype for Business
@@ -24,7 +26,7 @@ const SUNCTI = () => {
                 Business technology in order to improve their productivity.
               </p>
               <div>
-                <button className="btn btn-primary text-white">Expore More</button>
+                <Link href="/about" className="btn btn-secondary group-hover:btn-primary text-white group-hover:text-white">Expore More</Link>
               </div>
             </div>
           </div>

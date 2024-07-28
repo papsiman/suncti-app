@@ -30,8 +30,8 @@ const FOOTER = () => {
               <a className="link link-hover">Fax: +662-961-0600</a>
               <a className="link link-hover">E-Mail: Kit@suncti.co.th</a>
             </nav>
-            <div className="absolute -left-28 -top-10 w-56 h-56 mask mask-hexagon-2 bg-primary opacity-20"></div>
-            <div className="absolute right-0 -bottom-20 w-56 h-56 rotate-45 mask mask-squircle bg-primary opacity-20"></div>
+            {/* <div className="absolute -left-28 -top-10 w-56 h-56 mask mask-hexagon-2 bg-primary opacity-20"></div>
+            <div className="absolute right-0 -bottom-20 w-56 h-56 rotate-45 mask mask-squircle bg-primary opacity-20"></div> */}
           </div>
           {/* BOTTOM */}
           <div className="footer bg-[#18252f] text-neutral-content items-center px-4 md:px-32 xl:px-64 py-4">

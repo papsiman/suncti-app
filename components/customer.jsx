@@ -47,7 +47,7 @@ const CUSTOMER = () => {
     return (
       <div className="pt-16 pb-32 px-5 flex justify-center">
         <div className="max-w-5xl flex flex-col items-center">
-          <h2 className="text-4xl font-semibold">
+          <h2 className="text-2xl md:text-5xl font-semibold">
             Our <span className="text-primary">Customers</span> in Thailand
           </h2>
           <div className="flex flex-wrap flex-grow-0 justify-center gap-8 py-16">
@@ -56,9 +56,9 @@ const CUSTOMER = () => {
                 <div className="flex h-40 justify-center items-center">
                   <Image src={customer.img} alt="" loading = 'lazy' width={128} height={128} style={{ width: '128px', height: 'auto', maxHeight: '128px'}}/>
                 </div>
-                <div className="text-center py-3 px-3">
+                {/* <div className="text-center py-3 px-3">
                   <span>{customer.name}</span>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

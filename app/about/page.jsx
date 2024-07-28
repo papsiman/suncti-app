@@ -17,7 +17,7 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <div className="absolute top-10 w-full">
+        <div className="absolute w-full">
           <NAVBAR />
         </div>
       </div>
@@ -30,7 +30,8 @@ export default function About() {
             backgroundSize: "cover",
           }}
         >
-          <div className="col-span-12 md:col-span-7 mx-auto">
+          <div className="col-span-1"></div>
+          <div className="col-span-12 md:col-span-5 mx-auto">
             <img src="/ab-2.jpg" alt="" className="rounded-lg" />
           </div>
           <div className="col-span-12 md:col-span-5">
@@ -52,6 +53,7 @@ export default function About() {
               </p>
             </div>
           </div>
+          <div className="col-span-1"></div>
         </div>
       </div>
     </div>

@@ -2,10 +2,12 @@ import CUSTOMER from "@/components/customer";
 import HERO from "@/components/hero";
 import MSTEAM from "@/components/msteam";
 import PRICE from "@/components/price";
+import Quote from "@/components/quote";
 import SERVICE from "@/components/Service";
 import SERVICE2 from "@/components/service2";
 import SIKLL from "@/components/skill";
 import SUNCTI from "@/components/suncti";
+import Work from "@/components/work";
 
 export default function Home() {
   return (
@@ -17,11 +19,15 @@ export default function Home() {
         </div>
       </div>
       <MSTEAM />
+      <Work />
       {/* <SERVICE /> */}
       <SERVICE2 />
-      <SIKLL />
+      <div className="py-32">
+        <SIKLL />
+      </div>
       <PRICE />
       <CUSTOMER />
+      <Quote />
     </main>
   );
 }
