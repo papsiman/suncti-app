@@ -7,8 +7,8 @@ export default function MsTeam() {
     <div className="flex flex-col">
       {/* Heder */}
       <div className="w-full h-[50vh] bg-secondary relative">
-        <div className="absolute top-64 left-[calc(50vw-212px)] text-white flex flex-col justify-center items-center gap-4">
-          <h2 className="text-6xl font-semibold">Microsoft Team</h2>
+        <div className="absolute top-64 left-[calc(50vw-170px)] text-white flex flex-col justify-center items-center gap-4">
+          <h2 className="text-5xl font-semibold">Microsoft Team</h2>
           <div className="breadcrumbs text-sm">
             <ul>
               <li>

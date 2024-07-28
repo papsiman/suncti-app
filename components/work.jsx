@@ -17,7 +17,7 @@ function Work() {
                 <div className="col-span-2">
                   <div className="flex flex-row justify-center items-center">
                     <div className="bg-primary p-3 rounded-2xl">
-                      <Image src="/work/1.avif" alt="" width={32} height={32} />
+                      <Image src="/work/1.avif" alt="" width={32} height={32}/>
                     </div>
                   </div>
                 </div>

@@ -44,6 +44,7 @@ export default function SERVICE() {
                 alt=""
                 width={service.width}
                 height={service.height}
+                style={{ height:'auto' }}
               />
             </figure>
             <div className="card-body">

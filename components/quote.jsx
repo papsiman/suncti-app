@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 export default function Quote() {
@@ -21,15 +22,15 @@ export default function Quote() {
                     <div className="col-span-3">
                       <div className="avatar">
                         <div className="ring-primary ring-offset-base-100 w-20 rounded-full">
-                          <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                          <Image src="/PLim.jpg" alt="" width={80} height={0} />
                         </div>
                       </div>
                     </div>
                     {/* Name */}
                     <div className="col-span-9 px-4">
-                      <h4 className="text-primary">Jakub Czapski</h4>
+                      <h4 className="text-primary">Thaweesak Limsardsanakij</h4>
                       <span className="text-white">
-                        Founding Partner at Blazity
+                        Senior Engineer
                       </span>
                     </div>
                     <div className="col-span-12 pt-3">

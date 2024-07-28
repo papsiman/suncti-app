@@ -14,7 +14,7 @@ export default function Quote() {
       {/* Heder */}
       <div className="w-full h-[50vh] bg-secondary relative">
         <div className="absolute top-64 left-[calc(50vw-162px)] text-white flex flex-col justify-center items-center gap-4">
-          <h2 className="text-6xl font-semibold">Get A Quote</h2>
+          <h2 className="text-5xl font-semibold">Get A Quote</h2>
           <div className="breadcrumbs text-sm">
             <ul>
               <li>

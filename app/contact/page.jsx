@@ -15,8 +15,8 @@ export default function Contact() {
     <div className="flex flex-col bg-gray-50">
       {/* Header */}
       <div className="w-full h-[50vh] bg-secondary relative">
-        <div className="absolute top-64 left-[calc(50vw-105px)] text-white flex flex-col justify-center items-center gap-4">
-          <h2 className="text-6xl font-semibold">Contact</h2>
+        <div className="absolute top-64 left-[calc(50vw-84px)] text-white flex flex-col justify-center items-center gap-4">
+          <h2 className="text-5xl font-semibold">Contact</h2>
           <div className="breadcrumbs text-sm">
             <ul>
               <li>
