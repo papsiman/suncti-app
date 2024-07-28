@@ -61,7 +61,7 @@ export default function Paradox() {
             {items.map((item) => (
               <div className="card glass w-72 hover:bg-black hover:text-white hover:scale-105 cursor-pointer" key={item.id}>
                 <figure className='py-2 h-28 max-h-28'>
-                  <Image src={item.img} alt="" width={item.width} height={item.height} />
+                  <Image src={item.img} alt="" width={item.width} height={item.height} style={{ height:"auto" }}/>
                 </figure>
                 <div className="card-body p-4 pt-0">
                   <h2 className="card-title">{item.title}</h2>

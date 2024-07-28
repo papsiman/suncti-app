@@ -22,7 +22,7 @@ export default function Quote() {
                     <div className="col-span-3">
                       <div className="avatar">
                         <div className="ring-primary ring-offset-base-100 w-20 rounded-full">
-                          <Image src="/PLim.jpg" alt="" width={80} height={0} />
+                          <Image src="/PLim.jpg" alt="" width={80} height={0} style={{ height:"auto" }}/>
                         </div>
                       </div>
                     </div>
