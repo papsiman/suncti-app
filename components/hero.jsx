@@ -95,7 +95,7 @@ const HERO = () => {
                       width={32}
                       height={0}
                       className=""
-                      style={{ height:'auto' }}
+                      style={{ height:"auto" }}
                     />
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                   </div>
@@ -109,7 +109,7 @@ const HERO = () => {
                       width={32}
                       height={0}
                       className=""
-                      style={{ height:'auto' }}
+                      style={{ height:"auto" }}
                     />
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                   </div>
@@ -123,7 +123,7 @@ const HERO = () => {
                       width={32}
                       height={0}
                       className=""
-                      style={{ height:'auto' }}
+                      style={{ height:"auto" }}
                     />
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
                   </div>

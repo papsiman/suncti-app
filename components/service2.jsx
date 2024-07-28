@@ -11,7 +11,7 @@ export default function SERVICE2() {
       <div className="flex flex-wrap justify-center items-stretch py-32 gap-8">
         <div className="group card card-compact bg-base-100 w-96 shadow-2xl hover:bg-secondary hover:text-white p-10 relative overflow-hidden">
           <figure className="h-32">
-            <Image src="/service/1.png" alt="" width={128} height={0} style={{ height:'auto' }}/>
+            <Image src="/service/1.png" alt="" width={128} height={0} style={{ height:"auto" }}/>
           </figure>
           <div className="card-body">
             <h2 className="card-title">Microsoft Team</h2>
@@ -35,7 +35,7 @@ export default function SERVICE2() {
         </div>
         <div className="group card card-compact bg-base-100 w-96 shadow-2xl hover:bg-secondary hover:text-white p-10 relative overflow-hidden">
           <figure className="h-32">
-            <Image src="/service/2.png" alt="" width={186} height={0} style={{ height:'auto' }}/>
+            <Image src="/service/2.png" alt="" width={186} height={0} style={{ height:"auto" }}/>
           </figure>
           <div className="card-body">
             <h2 className="card-title">Audiocodes</h2>
@@ -58,7 +58,7 @@ export default function SERVICE2() {
         </div>
         <div className="group card card-compact bg-base-100 w-96 shadow-2xl hover:bg-secondary hover:text-white p-10 relative overflow-hidden">
           <figure className="h-32">
-            <Image src="/service/3.png" alt="" width={300} height={0} style={{ height:'auto' }}/>
+            <Image src="/service/3.png" alt="" width={300} height={0} style={{ height:"auto" }}/>
           </figure>
           <div className="card-body">
             <h2 className="card-title">Paradoxes</h2>

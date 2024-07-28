@@ -6,7 +6,7 @@ const FOOTER = () => {
           {/* TOP */}
           <div className="footer bg-secondary text-white px-4 md:px-32 xl:px-64 py-16 relative overflow-hidden">
             <aside>
-              <Image src="/suncti-logo.png" alt="" width={150} height={0} style={{ height:'auto' }}/>
+              <Image src="/suncti-logo.png" alt="" width={150} height={0} style={{ height:"auto" }}/>
               <p className="max-w-md">
                 SUNCTI TECHNOLOGY INNOVATION CO., LTD.
                 <br />

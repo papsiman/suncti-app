@@ -61,7 +61,7 @@ const NAVBAR = () => {
                 </li>
               </ul>
             </div>
-            <a href="/" className="text-black"><Image src="/suncti-black-logo.png" alt="" width={165} height={0} style={{ height:'auto' }}/></a>
+            <a href="/" className="text-black"><Image src="/suncti-black-logo.png" alt="" width={165} height={0} style={{ height:"auto" }}/></a>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
