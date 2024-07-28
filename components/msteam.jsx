@@ -103,7 +103,7 @@ const MSTEAM = () => {
       id: "3-2",
       img: "/msteam/3-2.avif",
       title: "Teams Phone Mobile",
-      des: "Seamlessly integrate your users' mobile identities with Teams. Assign a single number and implement a solution that works across network and devices.",
+      des: "Seamlessly integrate your users&apos; mobile identities with Teams. Assign a single number and implement a solution that works across network and devices.",
     },
     {
       id: "3-3",
@@ -325,7 +325,7 @@ const MSTEAM = () => {
                 <img id="Image"
                   src="/msteam/1.avif"
                   alt=""
-                  style={{ width: '800px'}}
+                  style={{ width: "800px"}}
                 />
               </figure>
               <div className="card-body">

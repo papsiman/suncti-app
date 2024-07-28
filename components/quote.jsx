@@ -35,8 +35,8 @@ export default function Quote() {
                     </div>
                     <div className="col-span-12 pt-3">
                       <p className="text-white">
-                        To best serve you, let's get to know your requirements
-                        first. Tell us about your project, and we'll arrange a
+                        To best serve you, let&apos;s get to know your requirements
+                        first. Tell us about your project, and we&apos;ll arrange a
                         free consultation call to discuss how we can help.
                       </p>
                     </div>

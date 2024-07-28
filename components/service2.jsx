@@ -40,7 +40,7 @@ export default function SERVICE2() {
           <div className="card-body">
             <h2 className="card-title">Audiocodes</h2>
             <p>
-              AudioCodes' reliable and versatile products have played a major
+              AudioCodes&apos; reliable and versatile products have played a major
               part in the project, giving us the flexibility and scalability we
               require to ensure that all our voice connectivity needs are met.
               Ralph Schepke, Head of User Experience at UCB.
@@ -65,7 +65,7 @@ export default function SERVICE2() {
             <p>
               VoIP Gateway products used to effectively implement the smooth
               VoIP network. The VoIP gateway is designed for comfort,
-              ease-of-use to satisfied necessary of customers. It's a
+              ease-of-use to satisfied necessary of customers. It&apos;s a
               cost-effective gateway for call termination and origination. It is
               fully compatible with leading Softswitch and SIP servers.
             </p>

@@ -31,7 +31,7 @@ export default function AudioCode() {
             backgroundSize: "cover",
           }}
         >
-          <div className='col-span-1'></div>
+          <div className="col-span-1"></div>
           <div className="col-span-12 md:col-span-5 mx-auto">
             <img src="/audiocodes.webp" alt="" className="rounded-lg" />
           </div>
@@ -39,7 +39,7 @@ export default function AudioCode() {
             <div className="max-w-6xl flex flex-col gap-2">
               <h2 className="text-4xl font-semibold">Overview</h2>
               <p className="font-medium text-gray-400 indent-10">
-              SunCTI is Audiocodes Official Partner in Thailand. We have local Audiocodes's certified engineer to implement and provide aftersale service for our customers.
+              SunCTI is Audiocodes Official Partner in Thailand. We have local Audiocodes&apos;s certified engineer to implement and provide aftersale service for our customers.
               </p>
               <p className="font-medium text-gray-400 indent-10">
               AudioCodes is a global company with an enduring commitment to the foundation of all human communications - voice.
@@ -52,7 +52,7 @@ export default function AudioCode() {
               </p>
             </div>
           </div>
-          <div className='col-span-1'></div>
+          <div className="col-span-1"></div>
         </div>
       </div>
     </div>
