@@ -11,7 +11,7 @@ import {
 
 const HERO = () => {
     return (
-      <div className="w-full h-screen bg-[#f3f3f3]">
+      <div className="w-full h-screen min-h-[844px] bg-[#f3f3f3]">
         <div className="relative h">
           {/* <div className="absolute w-28 h-64 -left-12 -top-14 rotate-[35deg] bg-primary"></div> */}
           <div className="absolute w-1 h-72 left-20 -top-10 rotate-[35deg] bg-primary opacity-15"></div>
