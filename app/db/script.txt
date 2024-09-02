@@ -1,0 +1,122 @@
+
+
+### user ###------------------
+
+;CREATE TABLE `user` ( 
+    Id int NOT NULL AUTO_INCREMENT,
+    Username varchar(255) NOT NULL,
+    Email varchar(255) NOT NULL,
+    Password varchar(255) NOT NULL,
+    PRIMARY KEY (Id) 
+);
+
+;INSERT INTO `user` (Username,Email,Password) VALUES ('a','a@a.com','a')
+
+### content ###------------------
+
+;CREATE TABLE setting ( 
+    Id int NOT NULL AUTO_INCREMENT, 
+    Logo varchar(255) NULL,
+    Title varchar(255) NULL,
+    Des varchar(255) NULL,
+    Tel varchar(255) NULL,
+    Fax varchar(255) NULL,
+    Email varchar(255) NULL,
+    PRIMARY KEY (Id)
+);
+
+;INSERT INTO setting (Logo,Title,Des,Tel,Fax,Email) VALUES ('/suncti-black-logo.png','SUNCTI TECHNOLOGY INNOVATION CO., LTD.','We offers Consultants, Implement and Operate of the Skype for Business (On-premise & Online)/ Microsoft Teams Phone in Thailand and ASEAN country. More than sixteen years our experiences in enterprise voice area.','+662-111-6066','+662-961-0600','Kit@suncti.co.th')
+
+### content ###------------------
+
+;CREATE TABLE content ( 
+    Id int NOT NULL AUTO_INCREMENT, 
+    Component varchar(255) NOT NULL, 
+    Title TEXT NULL,
+    Des TEXT NULL,
+    Img TEXT NULL,
+    ImgW int NULL,
+    ImgH int NULL,
+    Link TEXT NULL, 
+    Pdf TEXT NULL, 
+    PRIMARY KEY (Id)
+);
+
+;INSERT INTO `content` (Component,Title,Des) VALUES ('suncti','We are trusted business partner','SunCTI is a Microsoft Communications & Cloud partner. We offers Consultants, Implement and Operate of the Skype for Business (On-premise/Online) & Microsoft Teams in Thailand and ASEAN country. More than sixteen years our experiences in enterprise voice area. We target to be the best partner of customers to smooth transition the traditional telephone system to Skype for Business technology in order to improve their productivity.')
+
+;INSERT INTO `content` (Component,Title,Des) VALUES ('ms-title','Simplified, enterprise-grade calling in Microsoft Teams','')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms1','Basic call control','Connect with your team, customers, and partners with voice and video calls from a Teams chat, the Calls app, or the public switched telephone network (PSTN).','/msteam/1.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms1-1','Make and answer calls','Make one-on-one or group calls directly from a chat or use the dial pad to call a phone number.','/msteam/1-1.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms1-2','Merge calls','Bring someone else into your one-on-one or group call with the merge function.','/msteam/1-2.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms1-3','Transfer and ring back','Transfer a call to a colleague and select ring back if there’s no answer.','/msteam/1-3.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms1-4','Transfer calls between devices','Whether on the go or at a desk, at home, or in the office, transfer calls from one device to another while on a call.','/msteam/1-4.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms1-5','Access your voicemail','Access, listen to, and review your voicemails using playback controls, voicemail summary, and transcripts.','/msteam/1-5.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms1-6','Transcribe your calls','Transcribe calls no matter where you are. Focus on what’s being said, knowing you’ll be able to go back to the recording and transcription afterwards.','/msteam/1-6.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms1-7','Call on the go with Apple Carplay','Join calls and meetings using your vehicle’s built-in controls or hands-free with Siri.','/msteam/1-7.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms2','Advanced call control','Meet the needs of your evolving business with modern phone capabilities.','/msteam/2.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms2-1','Auto attendant','Let people call your organization and navigate a menu system to speak to the right department, call queue, person, or an operator.','/msteam/2-1.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms2-2','Call queues','Route callers to people in your organization who can help with a particular issue or question.','/msteam/2-2.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms2-3','Voice-enabled channels','Collaborate and share information within the channel while taking calls in the call queue.','/msteam/2-3.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms2-4','Screen pop','Automatically display information via web browser window when an incoming call is answered by a call queue agent.','/msteam/2-4.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms2-5','Copilot in Teams Phone','Add generative AI capabilities to phone calls to get real-time summarization and insights.','/msteam/2-5.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms3','PSTN calling','Make phone calls using PSTN connectivity options combined with the Teams Phone system.','/msteam/3.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms3-1','Operator Connect','Manage your PSTN calling and session border controllers (SBCs) with participating operators in the Microsoft Operator Connect program.','/msteam/3-1.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms3-2','Teams Phone Mobile','Seamlessly integrate your users&apos; mobile identities with Teams. Assign a single number and implement a solution that works across network and devices.','/msteam/3-2.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms3-3','Direct Routing','Connect your SBCs to Teams Phone to use your own PSTN operator.','/msteam/3-3.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms3-4','Microsoft Teams Calling Plans','Take advantage of this all-in-the-cloud solution with Microsoft as your PSTN operator.','/msteam/3-4.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms4','Contact center','Support customer interaction work streams, using Teams as the hub for internal and external customer connections.','/msteam/4.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms4-1','Microsoft Digital Contact Center Platform','Quickly set up phone systems for agents to assist customers on a scalable platform built, owned, and operated by Microsoft.','/msteam/4-1.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms4-2','Contact center partner integrations','Use your existing contact center solution together with Teams Phone for a more connected contact center experience.','/msteam/4-2.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms5','Devices','Experience instant, high-quality audio and video communication everywhere you work with seamless transitions across devices.','/msteam/5.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms5-1','Desk phones and Teams displays','','/msteam/5-1.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms5-2','Headsets','Choose from a variety of headsets certified for Teams—wired, Bluetooth, over the ear, or on the ear—to suit every preference or need.','/msteam/5-2.avif')
+;INSERT INTO `content` (Component,Title,Des,Img) VALUES ('ms5-3','Speakerphones','Connect with USB-enabled or Bluetooth-enabled speakerphone options to easily scale audio based on the room size and number of meeting participants.','/msteam/5-3.avif')
+
+;INSERT INTO `content` (Component,Title,Des) VALUES ('work-title','Why work with us','')
+;INSERT INTO `content` (Component,Title,Des) VALUES ('work1','Specialization','Building on 5 years of Next.js focus, we are the industry leader in providing unmatched expertise and experience for headless web implementations, delivering top-notch solutions for businesses seeking a specialized partner.')
+;INSERT INTO `content` (Component,Title,Des) VALUES ('work2','Consulting approach','We understand that communication is key to any successful project. We not only excel at developing high-quality solutions, but we also offer extensive consulting expertise, helping our clients make more informed decisions.')
+;INSERT INTO `content` (Component,Title,Des) VALUES ('work3','Speed & flexibility','We understand the importance of business value in software solutions. We fear no deadline. For urgent projects, we can flexibly scale our team to adapt to your timeline.')
+;INSERT INTO `content` (Component,Title,Des) VALUES ('work4','Stability','We prioritize lasting partnerships with our clients and maintain consistent team composition throughout the entire project to build trust and a deep understanding of your businesses.')
+
+;INSERT INTO `content` (Component,Title,Des) VALUES ('price-title','Microsoft Teams plan today','')
+
+;INSERT INTO `content` (Component,Title,Des) VALUES ('customer-title','Our Key Customers in Thailand','')
+;INSERT INTO `content` (Component,Img) VALUES ('customer-content','/customer/c-1.png')
+;INSERT INTO `content` (Component,Img) VALUES ('customer-content','/customer/c-2.png')
+;INSERT INTO `content` (Component,Img) VALUES ('customer-content','/customer/c-3.png')
+;INSERT INTO `content` (Component,Img) VALUES ('customer-content','/customer/c-4.png')
+;INSERT INTO `content` (Component,Img) VALUES ('customer-content','/customer/c-5.png')
+;INSERT INTO `content` (Component,Img) VALUES ('customer-content','/customer/c-6.png')
+;INSERT INTO `content` (Component,Img) VALUES ('customer-content','/customer/c-7.png')
+;INSERT INTO `content` (Component,Img) VALUES ('customer-content','/customer/c-8.png')
+
+
+;INSERT INTO `content` (Component,Title,Des) VALUES ('what-title','What We Do?','')
+
+;INSERT INTO `content` (Component,Title,Des,Img,Link) VALUES ('product-main-MicrosoftTeam','Microsoft Team','Microsoft Teams is a team collaboration application developed by Microsoft as part of the Microsoft 365 family of products, offering workspace chat and video conferencing, file storage, and integration of proprietary and third-party applications and services.','/service/1.png','/landing/msteam')
+
+;INSERT INTO `content` (Component,Title,Des,Img,Link) VALUES ('product-main-Audiocodes','Audiocodes','AudioCodes&apos; reliable and versatile products have played a major part in the project, giving us the flexibility and scalability we require to ensure that all our voice connectivity needs are met. Ralph Schepke, Head of User Experience at UCB.','/service/2.png','https://www.audiocodes.com/')
+
+;INSERT INTO `content` (Component,Title,Des,Img,Link) VALUES ('product-main-Paradoxes','Paradoxes','VoIP Gateway products used to effectively implement the smooth VoIP network. The VoIP gateway is designed for comfort, ease-of-use to satisfied necessary of customers. It&apos;s a cost-effective gateway for call termination and origination. It is fully compatible with leading Softswitch and SIP servers.','/service/3.png','/landing/product/Paradoxes')
+
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','3G VoIP','/paradoxes/1.png',200,0,'/paradoxes/1.pdf','The 3G VoIP Gateway is a multi-functional product used to effectively implement the smooth transition between 3G and VoIP network.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','IVR1000','/paradoxes/2.png',250,0,'/paradoxes/2.pdf','IVR 1000 platform is easy and simply voice automated with fewer human operators needed to be fully operational.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SAG1000','/paradoxes/3.png',150,0,'/paradoxes/3.pdf','SAG1000 is a perfect hardware product for the telecom carriers to provide the residential telephony, IMS/NGN ,radio over IP and fax ser- vices through the IP networks such as MPLS, HFC, and ADSL.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SAG1600','/paradoxes/4.png',250,0,'/paradoxes/4.pdf','SAG1600 is a perfect hardware product for the telecom carriers to provide the residential telephony ,radio over IP and fax services through the IP networks such as MPLS and ADSL.')
+
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SAG1602','/paradoxes/5.png',250,0,'/paradoxes/5.pdf','SAG1602 is a perfect product for the telecom carriers to provide the residential telephony ,radio over IP and fax services through the IP networks such as MPLS and ADSL.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SAG3200','/paradoxes/6.png',250,0,'/paradoxes/6.pdf','SAG3200 is a perfect product for the telecom carriers (NGN) to provide the residential telephony ,radio over IP and fax services through the IP networks such as MPLS, HFC, and ADSL.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SAG11200','/paradoxes/7.png',200,0,'','SAG11200 is a perfect product for the telecom carriers to provide the residential telephony ,radio over IP and fax services through the IP networks such as MPLS, HFC, and ADSL.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SGX200','/paradoxes/8.png',165,0,'/paradoxes/8.pdf','SGX200 is enterprise-grade trunk gateway product for IP trunk ,Radio over IP and fax ser- vices through the IP networks such as LL,MPLS.')
+
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SGX2000','/paradoxes/9.png',250,0,'/paradoxes/9.pdf','SGX2000E is carrier-grade trunk gateway product for the carrier to provide IP trunk ,radio over IP and fax services through the IP networks such as LL,MPLS.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SGX4000','/paradoxes/10.png',250,0,'/paradoxes/10.pdf','SGX4000 is carrier-grade NGN trunk gateway product for the carrier to provide the residential telephony ,radio over IP and fax services through the IP networks such as MPLS, HFC, and ADSL.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SGX6300','/paradoxes/11.png',250,0,'/paradoxes/11.pdf','SGX6300E is carrier-grade trunk gateway product for the carrier to provide IP trunk ,radio over IP and fax services through the IP networks such as LL,MPLS.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SGX8000','/paradoxes/12.png',250,0,'/paradoxes/12.pdf','SGX8000 is carrier-grade NGN trunk gateway product for the carrier to provide the residential telephony ,radio over IP and fax services through the IP networks such as MPLS, HFC, and ADSL.')
+
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SGX20000','/paradoxes/13.png',250,0,'/paradoxes/13.pdf','SGX20000 is carrier-grade trunk gateway product for the carrier to provide IP trunk ,radio over IP and fax services through the IP networks such as LL,MPLS.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SSX300','/paradoxes/14.png',60,0,'/paradoxes/14.pdf','The Server base Telephone System for Medium to Large business. . It makes a simple to create and deploy a wide range of VoIP telephony applications.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','SSX5000','/paradoxes/15.png',150,0,'/paradoxes/15.pdf','The Server base Telephone System for Medium to Large business. . It makes a simple to create and deploy a wide range of VoIP telephony applications.')
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','Mini Billling','/paradoxes/16.png',165,0,'/paradoxes/16.pdf','The mini billing system. It makes a simple to implement billing report of Avaya, NEC and Panasonic IPBX system. This small, power efficient, cost friendly device.')
+
+;INSERT INTO `content` (Component,Title,Img,ImgW,ImgH,Pdf,Des) VALUES ('/landing/product/Paradoxes','MPPT M50','/paradoxes/17.png',128,0,'/paradoxes/17.pdf','The Ultra-fast Maximum Power Point Tracking (MPPT). It makes a simple to improve energy harvest by up to 30% from PWM technology.')
