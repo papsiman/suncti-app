@@ -77,10 +77,9 @@ export default function ProductAdd({setRefresh}:any) {
       })
         .then((res) => res.json())
         .then((response) => {
-          console.log(response);
           if (response.status === "ok") {
             alert("Save success.");
-            setRefresh(e => ++e);
+            setRefresh((e: number) => ++e);
             setOpenDialog(false);
           } else {
             alert("Fail. " + response.message);

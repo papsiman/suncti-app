@@ -33,7 +33,7 @@ const Msteam = () => {
                     </Link>
                   </li>
                   <li>Product</li>
-                  <li>Microsoft Team</li>
+                  <li>Microsoft Teams</li>
                 </ul>
               </div>
             </div>

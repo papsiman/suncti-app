@@ -20,7 +20,7 @@ const Skill = () => {
                 </h4>
                 <h1 className="text-2xl sm:text-3xl font-bold pt-3 text-purple-500">
                   Professional Skill of{" "}
-                  <span className="text-white">SUNCTI.</span>
+                  <span className="text-white">SunCTI.</span>
                 </h1>
               </ContainerLeft>
             </Wrapper>
@@ -32,7 +32,7 @@ const Skill = () => {
                 <Wrapper>
                   <Container delay={0.5}>
                     <div className="flex flex-row justify-between text-lg">
-                      <h5 className="items-start text-white">MS Team phone implementor</h5>
+                      <h5 className="items-start text-white">MS Teams phone implementor</h5>
                       <h5 className="items-end text-primary text-xl font-semibold">90%</h5>
                     </div>
                     <progress

@@ -30,7 +30,6 @@ const MsteamComponent = () => {
       currId.classList.add("menu-dropdown-show");
     }
     setSelectContent(JSON.parse(e.currentTarget.getAttribute("data-content")));
-    //console.log(JSON.parse(e.currentTarget.getAttribute("data-content")));
   }
 
   function removeAll() {

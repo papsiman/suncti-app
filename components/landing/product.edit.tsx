@@ -50,7 +50,6 @@ export default function ProductEdit({ content, setRefresh }: any) {
       })
         .then((res) => res.json())
         .then((response) => {
-          console.log(response);
           if (response.status === "ok") {
             constentInput = { ...constentInput, ImgBase64: response.data };
             updateContent(constentInput);
@@ -71,7 +70,6 @@ export default function ProductEdit({ content, setRefresh }: any) {
       })
         .then((res) => res.json())
         .then((response) => {
-          console.log(response);
           if (response.status === "ok") {
             alert("Save success.");
             window.location.reload();

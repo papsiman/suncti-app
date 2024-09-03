@@ -95,7 +95,7 @@
 
 ;INSERT INTO `content` (Component,Title,Des) VALUES ('what-title','What We Do?','')
 
-;INSERT INTO `content` (Component,Title,Des,Img,Link) VALUES ('product-main-MicrosoftTeam','Microsoft Team','Microsoft Teams is a team collaboration application developed by Microsoft as part of the Microsoft 365 family of products, offering workspace chat and video conferencing, file storage, and integration of proprietary and third-party applications and services.','/service/1.png','/landing/msteam')
+;INSERT INTO `content` (Component,Title,Des,Img,Link) VALUES ('product-main-MicrosoftTeam','Microsoft Teams','Microsoft Teams is a team collaboration application developed by Microsoft as part of the Microsoft 365 family of products, offering workspace chat and video conferencing, file storage, and integration of proprietary and third-party applications and services.','/service/1.png','/landing/msteam')
 
 ;INSERT INTO `content` (Component,Title,Des,Img,Link) VALUES ('product-main-Audiocodes','Audiocodes','AudioCodes&apos; reliable and versatile products have played a major part in the project, giving us the flexibility and scalability we require to ensure that all our voice connectivity needs are met. Ralph Schepke, Head of User Experience at UCB.','/service/2.png','https://www.audiocodes.com/')
 

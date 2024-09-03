@@ -40,7 +40,6 @@ export default function MainLayout({
 
 
   const pathname = usePathname();
-  console.log(pathname);
 
   const activeMenu = "group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-purple-600 text-lg font-semibold text-white md:h-8 md:w-8 md:text-base"
   const inActiveMenu = "flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"

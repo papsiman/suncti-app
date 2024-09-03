@@ -1,24 +1,64 @@
 "use client"
 
 import Image from 'next/image';
-import React, { FormEvent } from 'react'
+import React, { FormEvent, useEffect, useState } from 'react'
 import Wrapper from '../common/warpper';
 import Container from '../common/container';
 import ContainerUpper from '../common/containerup';
-import { useRouter } from 'next/navigation';
+import { IEmail, ISetting } from '@/app/db';
 
 export default function Quote() {
 
-  const router = useRouter()
+  const [setting, setSetting] = useState<ISetting>();
+
+  // get setting
+  useEffect(() => {
+     fetch("/api/setting", {
+       method: "POST",
+       body: JSON.stringify({ Component: "product-main" }),
+       headers: { "Content-Type": "application/json" },
+     })
+       .then((res) => res.json())
+       .then((response) => {
+         if (response.status === "ok") {
+           setSetting(response.data[0]);
+         }
+       });
+  }, []);
+
   function onSubmit(event: FormEvent<HTMLFormElement>) {
+      
     event.preventDefault()
-    const data = new FormData(event.currentTarget);
-    var msg = 'Name = ' + data.get('name') + '<br/>';
-    msg += 'Email = ' + data.get('email') + '<br/>';
-    msg += 'Phone = ' + data.get('phone') + '<br/>';
-    msg += 'Message = ' + data.get('message') + '<br/>';
-    router.push('mailto:Kit@suncti.co.th?subject=Suncti website email from customer.&body='+msg);
-    location.reload();
+
+
+      const data = new FormData(event.currentTarget);
+      var body = 'Compnay = ' + data.get('compnay') + '<br/>';
+      body += 'Name = ' + data.get('name') + '<br/>';
+      body += 'Email = ' + data.get('email') + '<br/>';
+      body += 'Phone = ' + data.get('phone') + '<br/>';
+      body += 'Message = ' + data.get('message') + '<br/>';
+
+      const input: IEmail = {
+        to: setting?.Email!,
+        subject: 'SunCTI.co.th new Get A Quote',
+        body: body,
+      }
+
+      //Create data
+      fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify(input),
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((res) => res.json())
+      .then((response) => {
+        if (response.status === "ok") {
+          alert("Send mail success.");
+        } else {
+          alert("Fail. " + response.message);
+        }
+      });
+
   };
 
   return (
@@ -56,7 +96,7 @@ export default function Quote() {
                         <h4 className="text-lg font-semibold text-purple-500">
                           Thaweesak Limsardsanakij
                         </h4>
-                        <span className="text-white">Senior Engineer</span>
+                        <span className="text-white">CO-CEO</span>
                       </div>
                       <div className="col-span-12 pt-3">
                         <p className="text-white">

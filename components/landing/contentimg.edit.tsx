@@ -72,7 +72,7 @@ export default function ContentImgEdit({content, setRefresh}:any) {
         console.log(response);
         if (response.status === "ok") {
           alert("Save success.");
-          setRefresh(e => ++e);
+          setRefresh((e: number) => ++e);
           setOpenDialog(false);
         } else {
           alert("Fail. " + response.message);

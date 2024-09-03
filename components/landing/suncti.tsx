@@ -41,7 +41,7 @@ const Suncti = () => {
           <Wrapper>
             <Container>
               <div className="flex flex-col gap-4">
-                <h4 className="text-xl font-semibold text-slate-600">Welcom To SUNCTI</h4>
+                <h4 className="text-xl font-semibold text-slate-600">Welcome to SunCTI</h4>
                 <h2 className="text-2xl md:text-3xl font-semibold text-slate-600">
                 {contents?.Title}
                 </h2>

@@ -55,7 +55,6 @@ export default function ProductItemEdit({ content, setRefresh }: any) {
         .then((res) => res.json())
         .then((response) => {
           if(response.status === 'ok'){
-            console.log(response.data);
             if(response.data.imgResultPath){
               constentInput = {...constentInput, ImgBase64: response.data.imgResultPath};
             }
@@ -81,10 +80,9 @@ export default function ProductItemEdit({ content, setRefresh }: any) {
       })
         .then((res) => res.json())
         .then((response) => {
-          console.log(response);
           if (response.status === "ok") {
             alert("Save success.");
-            setRefresh(e => ++e);
+            setRefresh((e: number) => ++e);
             setOpenDialog(false);
           } else {
             alert("Fail. " + response.message);

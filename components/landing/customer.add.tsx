@@ -19,7 +19,7 @@ import { useSession } from "next-auth/react";
 import { IContent } from "@/app/db";
 import { useRef, useState } from "react";
 
-const CustomerAdd = ({setRefresh}) => {
+const CustomerAdd = ({setRefresh} : any) => {
 
   const fileInput = useRef<HTMLInputElement>(null);
 
@@ -46,7 +46,6 @@ const CustomerAdd = ({setRefresh}) => {
       })
       .then((res) => res.json())
       .then((response) => {
-        console.log(response);
         if(response.status === 'ok'){
           constentInput = {...constentInput, ImgBase64: response.data};
           updateContent(constentInput);
@@ -70,10 +69,9 @@ const CustomerAdd = ({setRefresh}) => {
       })
       .then((res) => res.json())
       .then((response) => {
-        console.log(response);
         if (response.status === "ok") {
           alert("Save success.");
-          setRefresh(e => ++e);
+          setRefresh((e: number) => ++e);
           setOpenDialog(false);
         } else {
           alert("Fail. " + response.message);

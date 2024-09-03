@@ -94,7 +94,7 @@ function Product({ params }: { params: { slug: string } }) {
                               <div className="text-white">Download</div>
                             </div>
                             <div className="absolute p-2 bottom-2 border right-2 text-4xl card bg-white  cursor-pointer">
-                              <a onClick={()=>downloadPDF(item?.PdfBase64 ? item?.PdfBase64 : item?.Pdf, item.Title)}
+                              <a onClick={()=>downloadPDF(item?.PdfBase64 ? item?.PdfBase64 : item?.Pdf!, item?.Title!)}
                                 className="text-red-500"
                               >
                                 <FontAwesomeIcon icon={faFilePdf} />

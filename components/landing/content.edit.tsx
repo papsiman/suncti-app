@@ -45,7 +45,7 @@ export default function ContentEdit({content, setRefresh}:any) {
       console.log(response);
       if(response.status === 'ok'){
         alert("Save success.");
-        setRefresh(e => ++e);
+        setRefresh((e: number) => ++e);
         setOpenDialog(false);
       }
       else{

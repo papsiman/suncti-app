@@ -40,7 +40,7 @@ export default function ProductDel({ content, setRefresh }: any) {
     .then((response) => {
       if (response.status === "ok") {
         alert("Delete success.");
-        setRefresh(e => ++e);
+        setRefresh((e: number) => ++e);
         setOpenDialog(false);
       } else {
         alert("Fail. " + response.message);

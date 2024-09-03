@@ -49,7 +49,6 @@ const ProductItemAdd = ({link, setRefresh}:any) => {
       })
       .then((res) => res.json())
       .then((response) => {
-        console.log(response);
         if(response.status === 'ok'){
           if(response.data.imgResultPath){
             constentInput = {...constentInput, ImgBase64: response.data.imgResultPath};
@@ -79,10 +78,9 @@ const ProductItemAdd = ({link, setRefresh}:any) => {
       })
       .then((res) => res.json())
       .then((response) => {
-        console.log(response);
         if (response.status === "ok") {
           alert("Save success.");
-          setRefresh(e => ++e);
+          setRefresh((e: number) => ++e);
           setOpenDialog(false);
         } else {
           alert("Fail. " + response.message);

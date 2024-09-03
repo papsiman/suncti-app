@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
-import fs from "node:fs/promises";
 
 export async function POST(req: Request) {
     try {
@@ -50,7 +49,6 @@ export async function POST(req: Request) {
         }});
     } 
     catch (e) {
-        console.error(e);
-        return NextResponse.json({ status: "fail", error: e.message });
+        return NextResponse.json({ status: "fail", error: (e as Error).message });
     }
 }

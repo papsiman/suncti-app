@@ -8,44 +8,68 @@ import { faEnvelope,
   faFax,} from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import React, { FormEvent, useEffect, useState} from 'react';
-import { useRouter } from "next/navigation";
-import { ISetting } from "@/app/db";
+import { IEmail, ISetting } from "@/app/db";
 import SettingUpdate from "@/components/common/setting.update";
 
 const Contact = () => {
 
-  const [setting, setSetting] = useState<ISetting>();
-  const [refresh, setRefresh] = useState(0);
+    const [setting, setSetting] = useState<ISetting>();
+    const [refresh, setRefresh] = useState(0);
 
-  // get setting
-  useEffect(() => {
+    // get setting
+    useEffect(() => {
 
-    fetch("/api/setting", {
-      method: "POST",
-      body: JSON.stringify({Component: "product-main"}),
-      headers: { "Content-Type": "application/json" },
-    })
-    .then((res) => res.json())
-    .then((response) => {
-      if (response.status === "ok") {
-        setSetting(response.data[0]);
+      fetch("/api/setting", {
+        method: "POST",
+        body: JSON.stringify({Component: "product-main"}),
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((res) => res.json())
+      .then((response) => {
+        if (response.status === "ok") {
+          setSetting(response.data[0]);
+        }
+      });
+
+    }, [refresh]);
+
+
+    function onSubmit(event: FormEvent<HTMLFormElement>) {
+
+      event.preventDefault();
+      
+      const data = new FormData(event.currentTarget);
+      var body = 'compnay = ' + data.get('compnay') + '<br/>';
+      body += 'Name = ' + data.get('name') + '<br/>';
+      body += 'Email = ' + data.get('email') + '<br/>';
+      body += 'Phone = ' + data.get('phone') + '<br/>';
+      body += 'Message = ' + data.get('message') + '<br/>';
+      // router.push('mailto:Kit@suncti.co.th?subject=Suncti website email from customer.&body='+msg);
+      // location.reload();
+
+      const input: IEmail = {
+        to: setting?.Email!,
+        subject: 'SunCTI.co.th new contact',
+        body: body,
       }
-    });
 
-  }, [refresh]);
+      //Create data
+      fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify(input),
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((res) => res.json())
+      .then((response: { status: string; message: string; }) => {
+        if (response.status === "ok") {
+          alert("Send mail success.");
+        } else {
+          alert("Fail. " + response.message);
+        }
+      });
 
-  const router = useRouter()
-  function onSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    const data = new FormData(event.currentTarget);
-    var msg = 'compnay = ' + data.get('compnay') + '<br/>';
-    msg += 'Name = ' + data.get('name') + '<br/>';
-    msg += 'Email = ' + data.get('email') + '<br/>';
-    msg += 'Phone = ' + data.get('phone') + '<br/>';
-    msg += 'Message = ' + data.get('message') + '<br/>';
-    router.push('mailto:Kit@suncti.co.th?subject=Suncti website email from customer.&body='+msg);
-    location.reload();
-  };
+    };
+
 
   return (
     <div className="h-[100vh] w-full bg-white bg-grid-black/[0.2] relative flex">

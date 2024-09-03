@@ -29,6 +29,7 @@
     "mysql2": "^3.11.0",
     "next": "14.2.5",
     "next-auth": "^4.24.7",
+    "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
     "recharts": "^2.12.7",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.14.15",
+    "@types/nodemailer": "^6.4.15",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "daisyui": "^4.12.10",

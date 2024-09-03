@@ -48,7 +48,6 @@ export default function SettingUpdate({ setting, setRefresh }: any) {
       })
         .then((res) => res.json())
         .then((response) => {
-          console.log(response);
           if (response.status === "ok") {
             input = { ...input, LogoBase64: response.data };
             updateContent(input);
@@ -69,7 +68,6 @@ export default function SettingUpdate({ setting, setRefresh }: any) {
       })
         .then((res) => res.json())
         .then((response) => {
-          console.log(response);
           if (response.status === "ok") {
             alert("Save success.");
             window.location.reload();
