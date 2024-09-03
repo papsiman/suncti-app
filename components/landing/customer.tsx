@@ -65,7 +65,7 @@ const Customer = () => {
               >
                 <div className="relative flex h-48 justify-center items-center">
                   <Image
-                    src={customer?.Img ? customer.Img : "/empty/w128.png"}
+                    src={customer?.ImgBase64 ? customer?.ImgBase64 : (customer?.Img ? customer?.Img : "/empty/w128.png")}
                     alt=""
                     sizes="100vw"
                     style={{

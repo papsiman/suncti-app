@@ -1,3 +1,4 @@
+import { Blob } from "buffer";
 
 export interface IUser {
     Id: number,
@@ -9,6 +10,7 @@ export interface IUser {
 export interface ISetting {
     Id: number,
     Logo?: string,
+    LogoBase64?: string,
     Title?: string,
     Des?: string,
     Tel?: string,
@@ -22,6 +24,7 @@ export interface IContent {
     Title?: string,
     Des?: string,
     Img?: string,
+    ImgBase64?: string,
     ImgW?: number,
     ImgH?: number,
     Link?: string,

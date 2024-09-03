@@ -3,7 +3,7 @@ import AnimatedShinyText from "../magicui/animated-shiny-text";
 import Login from "@/app/login/page";
 import Setting from "./setting";
 import { useEffect, useState } from "react";
-import { IContent } from "@/app/db";
+import { IContent, ISetting } from "@/app/db";
 import ProductComponent from "../landing/product.component";
 
 const Navbar = () => {
@@ -12,8 +12,10 @@ const Navbar = () => {
   inputContent.Component = "product-main-";
 
   const [products, setProducts] = useState<IContent[]>([]);
+  const [setting, setSetting] = useState<ISetting>();
   const [refresh, setRefresh] = useState(0);
 
+  // get product
   useEffect(() => {
     fetch("/api/content", {
       method: "POST",
@@ -26,6 +28,22 @@ const Navbar = () => {
           setProducts(response.data);
         }
       });
+  }, [refresh]);
+
+  // get setting
+  useEffect(() => {
+
+    fetch("/api/setting", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+    })
+    .then((res) => res.json())
+    .then((response) => {
+      if (response.status === "ok") {
+        setSetting(response.data[0]);
+      }
+    });
+
   }, [refresh]);
 
   return (
@@ -98,9 +116,9 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a href="/" className="text-black">
+        <a id="navbarlogo" href="/" className="text-black">
           <Image
-            src="/suncti-black-logo.png"
+            src={setting?.LogoBase64 ? setting?.LogoBase64 : (setting?.Logo ? setting?.Logo : "/suncti-black-logo.png")}
             alt=""
             width={125}
             height={0}

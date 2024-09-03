@@ -250,7 +250,7 @@ const MsteamComponent = () => {
               <figure>
                 <img
                   id="Image"
-                  src={selectContent?.Img ? selectContent.Img: '/empty/w128.png'}
+                  src={selectContent?.ImgBase64 ? selectContent?.ImgBase64 : (selectContent?.Img ? selectContent?.Img : "/empty/w128.png")}
                   alt=""
                   style={{ width: "800px" }}
                 />

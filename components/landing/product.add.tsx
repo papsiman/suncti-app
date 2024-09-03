@@ -58,7 +58,7 @@ export default function ProductAdd({setRefresh}:any) {
         .then((res) => res.json())
         .then((response) => {
           if (response.status === "ok") {
-            constentInput = { ...constentInput, Img: response.data };
+            constentInput = { ...constentInput, ImgBase64: response.data };
             updateContent(constentInput);
           } else {
             alert("Upload Fail. " + response.message);

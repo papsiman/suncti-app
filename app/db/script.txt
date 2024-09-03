@@ -17,6 +17,7 @@
 ;CREATE TABLE setting ( 
     Id int NOT NULL AUTO_INCREMENT, 
     Logo varchar(255) NULL,
+    LogoBase64 TEXT NULL,
     Title varchar(255) NULL,
     Des varchar(255) NULL,
     Tel varchar(255) NULL,
@@ -35,6 +36,7 @@
     Title TEXT NULL,
     Des TEXT NULL,
     Img TEXT NULL,
+    ImgBase64 TEXT NULL,
     ImgW int NULL,
     ImgH int NULL,
     Link TEXT NULL, 

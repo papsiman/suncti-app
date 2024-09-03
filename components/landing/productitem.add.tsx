@@ -52,7 +52,7 @@ const ProductItemAdd = ({link, setRefresh}:any) => {
         console.log(response);
         if(response.status === 'ok'){
           if(response.data.imgResultPath){
-            constentInput = {...constentInput, Img: response.data.imgResultPath};
+            constentInput = {...constentInput, ImgBase64: response.data.imgResultPath};
           }
           if(response.data.docResultPath){
             constentInput = {...constentInput, Pdf: response.data.docResultPath};

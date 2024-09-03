@@ -47,7 +47,7 @@ export default function CustomerUpload({content, setRefresh}:any) {
       .then((response) => {
         console.log(response);
         if(response.status === 'ok'){
-          constentInput = {...constentInput, Img: response.data};
+          constentInput = {...constentInput, ImgBase64: response.data};
           updateContent(constentInput);
         }
         else{
@@ -71,9 +71,12 @@ export default function CustomerUpload({content, setRefresh}:any) {
       .then((response) => {
         console.log(response);
         if (response.status === "ok") {
+
           alert("Save success.");
+
           setRefresh((e: number) => ++e);
           setOpenDialog(false);
+          
         } else {
           alert("Fail. " + response.message);
         }

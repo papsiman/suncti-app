@@ -26,6 +26,7 @@ export default function ProductItemEdit({ content, setRefresh }: any) {
   const [openDialog, setOpenDialog] = useState(false);
 
   const handleSumit = (event: any) => {
+
     event.preventDefault();
 
     let constentInput: IContent = {
@@ -34,6 +35,7 @@ export default function ProductItemEdit({ content, setRefresh }: any) {
       Title: event.target.title.value,
       Des: event.target.des.value,
       Img: content.Img,
+      ImgBase64: content.ImgBase64,
       Pdf: content.Pdf,
     };
 
@@ -52,17 +54,14 @@ export default function ProductItemEdit({ content, setRefresh }: any) {
       })
         .then((res) => res.json())
         .then((response) => {
-          console.log(response);
           if(response.status === 'ok'){
             console.log(response.data);
             if(response.data.imgResultPath){
-              constentInput = {...constentInput, Img: response.data.imgResultPath};
+              constentInput = {...constentInput, ImgBase64: response.data.imgResultPath};
             }
             if(response.data.docResultPath){
               constentInput = {...constentInput, Pdf: response.data.docResultPath};
             }
-            console.log(constentInput);
-            
             updateContent(constentInput);
           }
           else{

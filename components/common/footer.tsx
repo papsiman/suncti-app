@@ -54,9 +54,9 @@ const Footer = () => {
         <div className="footer max-w-screen-xl p-4 md:py-16 relative overflow-hidden">
           <aside className="relative">
             <Image
-              src={setting?.Logo ? setting.Logo: "/suncti-logo.png"}
+              src={setting?.LogoBase64 ? setting?.LogoBase64 : (setting?.Logo ? setting?.Logo : "/suncti-black-logo.png")}
               alt=""
-              width={150}
+              width={125}
               height={0}
               style={{ height: "auto" }}
             />

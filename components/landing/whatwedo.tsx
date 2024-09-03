@@ -76,7 +76,7 @@ export default function WhatWeDo() {
                     <div className="bg-slate-200 rounded-tl-xl rounded-tr-xl">
                       <figure className="relative h-32">
                         <Image
-                          src={item.Img ? item.Img: '/empty/w128.png'}
+                          src={item?.ImgBase64 ? item?.ImgBase64 : (item?.Img ? item?.Img : "/empty/w128.png")}
                           alt=""
                           width={0}
                           height={0}

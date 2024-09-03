@@ -52,7 +52,7 @@ export default function ProductEdit({ content, setRefresh }: any) {
         .then((response) => {
           console.log(response);
           if (response.status === "ok") {
-            constentInput = { ...constentInput, Img: response.data };
+            constentInput = { ...constentInput, ImgBase64: response.data };
             updateContent(constentInput);
           } else {
             alert("Upload Fail. " + response.message);
@@ -74,8 +74,7 @@ export default function ProductEdit({ content, setRefresh }: any) {
           console.log(response);
           if (response.status === "ok") {
             alert("Save success.");
-            setRefresh(e => ++e);
-            setOpenDialog(false);
+            window.location.reload();
           } else {
             alert("Fail. " + response.message);
           }

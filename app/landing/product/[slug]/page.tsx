@@ -67,7 +67,7 @@ function Product({ params }: { params: { slug: string } }) {
                       <div className="relation card glass w-72 overflow-hidden" key={item?.Id}>
                         <figure className="py-2 h-28 max-h-28 bg-violet-100/30">
                           <Image
-                            src={item?.Img ? item.Img: '/empty/w128.png'}
+                            src={item?.ImgBase64 ? item?.ImgBase64 : (item?.Img ? item?.Img : "/empty/w128.png")}
                             alt=""
                             width={item?.ImgW ?? 250}
                             height={item?.ImgH ?? 0}
@@ -76,7 +76,7 @@ function Product({ params }: { params: { slug: string } }) {
                         </figure>
                         <div className="card-body p-4 pb-10">
                           <h2 className="card-title">{item?.Title}</h2>
-                          <p className="overflow-y-auto h-32 overscroll-contain">
+                          <p className="text-xs overflow-y-auto h-32 overscroll-contain">
                             {item?.Des}
                           </p>
                         </div>

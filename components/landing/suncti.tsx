@@ -33,7 +33,6 @@ const Suncti = () => {
         <div className="w-full bg-white col-span-12 md:col-span-6 border border-border rounded-lg">
           <Wrapper>
             <ContainerUpper>
-              {/* <img src="/ab-2.jpg" alt="" className="rounded-lg" /> */}
               <Beam />
             </ContainerUpper>
           </Wrapper>

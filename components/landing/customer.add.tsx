@@ -48,7 +48,7 @@ const CustomerAdd = ({setRefresh}) => {
       .then((response) => {
         console.log(response);
         if(response.status === 'ok'){
-          constentInput = {...constentInput, Img: response.data};
+          constentInput = {...constentInput, ImgBase64: response.data};
           updateContent(constentInput);
         }
         else{
