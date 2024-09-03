@@ -27,12 +27,19 @@ export async function POST(req: Request) {
         
         //Doc
         if(formData.get("fileDoc") !== 'undefined'){
+            // const fileDoc = formData.get("fileDoc") as File;
+            // const arrayBufferDoc = await fileDoc.arrayBuffer();
+            // const bufferDoc = new Uint8Array(arrayBufferDoc);
+            // const newFileDocName = (new Date().getTime()).toString() +'.'+ fileDoc.name.split('.').pop() ;
+            // await fs.writeFile(`./public/uploads/${newFileDocName}`, bufferDoc);
+            //docResultPath = `/uploads/${newFileDocName}`
+
+            //Write file to database
             const fileDoc = formData.get("fileDoc") as File;
             const arrayBufferDoc = await fileDoc.arrayBuffer();
-            const bufferDoc = new Uint8Array(arrayBufferDoc);
-            const newFileDocName = (new Date().getTime()).toString() +'.'+ fileDoc.name.split('.').pop() ;
-            await fs.writeFile(`./public/uploads/${newFileDocName}`, bufferDoc);
-            docResultPath = `/uploads/${newFileDocName}`
+            const bufferDoc = Buffer.from(arrayBufferDoc).toString('base64');
+            docResultPath = `data:${fileDoc.type};base64,${bufferDoc}`;
+            
         }
 
         revalidatePath("/");

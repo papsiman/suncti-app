@@ -60,7 +60,7 @@ export default function ProductItemEdit({ content, setRefresh }: any) {
               constentInput = {...constentInput, ImgBase64: response.data.imgResultPath};
             }
             if(response.data.docResultPath){
-              constentInput = {...constentInput, Pdf: response.data.docResultPath};
+              constentInput = {...constentInput, PdfBase64: response.data.docResultPath};
             }
             updateContent(constentInput);
           }

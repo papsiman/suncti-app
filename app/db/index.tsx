@@ -29,4 +29,5 @@ export interface IContent {
     ImgH?: number,
     Link?: string,
     Pdf?: string,
+    PdfBase64?: string,
 }
