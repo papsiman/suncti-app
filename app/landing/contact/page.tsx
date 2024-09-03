@@ -62,6 +62,7 @@ const Contact = () => {
       .then((response: { status: string; message: string; }) => {
         if (response.status === "ok") {
           alert("Send mail success.");
+          window.location.reload();
         } else {
           alert("Fail. " + response.message);
         }

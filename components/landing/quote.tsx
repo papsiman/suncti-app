@@ -54,6 +54,7 @@ export default function Quote() {
       .then((response) => {
         if (response.status === "ok") {
           alert("Send mail success.");
+          window.location.reload();
         } else {
           alert("Fail. " + response.message);
         }
