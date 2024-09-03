@@ -40,7 +40,7 @@ export default function Quote() {
 
       const input: IEmail = {
         to: setting?.Email!,
-        subject: 'SunCTI.co.th new Get A Quote',
+        subject: 'SunCTI.co.th new Get A Quote.',
         body: body,
       }
 

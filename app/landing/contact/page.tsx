@@ -39,8 +39,7 @@ const Contact = () => {
       event.preventDefault();
       
       const data = new FormData(event.currentTarget);
-      var body = 'compnay = ' + data.get('compnay') + '<br/>';
-      body += 'Name = ' + data.get('name') + '<br/>';
+      var body = 'Name = ' + data.get('name') + '<br/>';
       body += 'Email = ' + data.get('email') + '<br/>';
       body += 'Phone = ' + data.get('phone') + '<br/>';
       body += 'Message = ' + data.get('message') + '<br/>';
@@ -49,7 +48,7 @@ const Contact = () => {
 
       const input: IEmail = {
         to: setting?.Email!,
-        subject: 'SunCTI.co.th new contact',
+        subject: 'SunCTI.co.th new contact.',
         body: body,
       }
 
