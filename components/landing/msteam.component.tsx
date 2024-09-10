@@ -5,7 +5,7 @@ import Container from "../common/container";
 import Wrapper from "../common/warpper";
 import { useEffect, useState } from "react";
 import ContentEdit from "./content.edit";
-import ContentImgEdit from "./contentimg.edit";
+import MsteamEdit from "./msteam.edit";
 
 const MsteamComponent = () => {
 
@@ -59,7 +59,7 @@ const MsteamComponent = () => {
             setMsContents(response.data);
           }
         });
-    }, [refresh]);
+    }, []);
   }
 
   return (
@@ -259,7 +259,7 @@ const MsteamComponent = () => {
                   {selectContent?.Title}
                 </h2>
                 <p id="Des">{selectContent?.Des}</p>
-                <ContentImgEdit content={selectContent} setRefresh={setRefresh}/>
+                <MsteamEdit content={selectContent} setSelectContent={setSelectContent}/>
               </div>
             </div>
           </div>
