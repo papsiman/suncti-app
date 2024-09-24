@@ -48,14 +48,14 @@ const Suncti = () => {
                 <p className="text-slate-600 indent-10">
                   {contents?.Des}
                 </p>
-                <div className="my-4">
+                {/* <div className="my-4">
                   <Link
                     href="/landing/about"
                     className="btn btn-sm bg-slate-200 hover:bg-slate-300"
                   >
                     Expore More
                   </Link>
-                </div>
+                </div> */}
               </div>
             </Container>
           </Wrapper>
