@@ -32,7 +32,7 @@ const Skill = () => {
                 <Wrapper>
                   <Container delay={0.5}>
                     <div className="flex flex-row justify-between text-lg">
-                      <h5 className="items-start text-white">MS Teams phone implementor</h5>
+                      <h5 className="items-start text-white">MS Teams Phone Implementor</h5>
                       <h5 className="items-end text-primary text-xl font-semibold">90%</h5>
                     </div>
                     <progress
@@ -48,7 +48,7 @@ const Skill = () => {
                 <Wrapper>
                   <Container delay={0.6}>
                     <div className="flex flex-row justify-between text-lg">
-                      <h5 className="items-start text-white">VOIP implememtor</h5>
+                      <h5 className="items-start text-white">VOIP Implementor</h5>
                       <h5 className="items-end text-primary text-xl font-semibold">85%</h5>
                     </div>
                     <progress
@@ -64,7 +64,7 @@ const Skill = () => {
                 <Wrapper>
                   <Container delay={0.7}>
                   <div className="flex flex-row justify-between text-lg">
-                      <h5 className="items-start text-white">Profestional service support</h5>
+                      <h5 className="items-start text-white">Profestional Service Support</h5>
                       <h5 className="items-end text-primary text-xl font-semibold">80%</h5>
                     </div>
                     <progress

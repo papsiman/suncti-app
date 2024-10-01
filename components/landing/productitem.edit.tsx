@@ -61,6 +61,9 @@ export default function ProductItemEdit({ content, setRefresh }: any) {
             if(response.data.docResultPath){
               constentInput = {...constentInput, PdfBase64: response.data.docResultPath};
             }
+
+            console.log(constentInput);
+
             updateContent(constentInput);
           }
           else{

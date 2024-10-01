@@ -36,11 +36,11 @@
     Title TEXT NULL,
     Des TEXT NULL,
     Img TEXT NULL,
-    ImgBase64 TEXT NULL,
+    ImgBase64 LONGTEXT NULL,
     ImgW int NULL,
     ImgH int NULL,
     Link TEXT NULL, 
-    Pdf TEXT NULL, 
+    Pdf LONGTEXT NULL, 
     PRIMARY KEY (Id)
 );
 
