@@ -33,3 +33,14 @@ export async function POST(request: Request) {
     }
     
 }
+
+export async function DELETE(request: Request){
+    const res: IUser = await request.json();
+    try{
+        await execQuery("DELETE FROM `user` WHERE `Id` = "+res.Id);
+        return Response.json({ status:'ok', message: '/api/user/delete', data: res })
+    }
+    catch(err){
+        return Response.json({ status:'error', message: '/api/user/delete', data: err })
+    }
+}

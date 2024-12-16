@@ -35,6 +35,7 @@ import { useEffect, useState } from "react"
 import UserCreate from "./create/page"
 import UserEdit from "./edit/page"
 import { IUser } from "@/app/db"
+import UserDel from "@/components/landing/user.del"
 
 export default function User() {
 
@@ -73,7 +74,7 @@ export default function User() {
           </CardHeader>
               <CardContent>
                 <Table>
-                   {/* Table Header */}
+                  {/* Table Header */}
                   <TableHeader>
                     <TableRow>
                       <TableHead>Username</TableHead>
@@ -98,19 +99,15 @@ export default function User() {
                           <TableCell>
                             <DropdownMenu>
                               <DropdownMenuTrigger asChild>
-                                <Button
-                                  aria-haspopup="true"
-                                  size="icon"
-                                  variant="ghost"
-                                >
+                                <Button aria-haspopup="true" size="icon" variant="ghost">
                                   <MoreHorizontal className="h-4 w-4" />
                                   <span className="sr-only">Toggle menu</span>
                                 </Button>
                               </DropdownMenuTrigger>
                               <DropdownMenuContent align="end">
                                 <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                <UserEdit user={item} setRefresh={setRefresh}/>
-                                <DropdownMenuItem>Delete</DropdownMenuItem>
+                                <UserEdit user={item} setRefresh={setRefresh} />
+                                <UserDel user={item} setRefresh={setRefresh} />
                               </DropdownMenuContent>
                             </DropdownMenu>
                           </TableCell>
