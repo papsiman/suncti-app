@@ -7,6 +7,11 @@ export async function POST(request: Request) {
 
     if(res.Id == 0){
         //Insert
+        const users = await execQuery("select * from `user` where Username = '"+res.Username+"'");
+        if(users.length > 0){
+            return Response.json({ status:'error', message: 'Username already exists.', res: res })
+        }
+
         try{
             await execQuery("INSERT INTO `user` (UserName, Email, Password) VALUES ('"+res.Username+"','"+res.Email+"','"+res.Password+"')");
         }
@@ -15,6 +20,12 @@ export async function POST(request: Request) {
         }
     }
     else{
+
+        const users = await execQuery("select * from `user` where Id <> "+res.Id+" and Username = '"+res.Username+"'");
+        if(users.length > 0){
+            return Response.json({ status:'error', message: 'Username already exists.', res: res })
+        }
+
         //Update
         try{
             if(res.Password){
