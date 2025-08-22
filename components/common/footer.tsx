@@ -79,7 +79,7 @@ const Footer = () => {
           </nav>
           <nav>
             <h6 className="footer-title">Quick Link</h6>
-            <a href="/landing/catalog" className="link link-hover">About us</a>
+            <a href="/landing/about" className="link link-hover">About us</a>
             <a href="/landing/contact" className="link link-hover">Contact</a>
           </nav>
           <nav>
