@@ -14,11 +14,29 @@ const MsteamComponent = () => {
   const [msContents, setMsContents] = useState<IContent[]>([]);
   const [refresh, setRefresh] = useState(0);
 
-  init();
-
-  function init() {
-    fetchData()
-  }
+  useEffect(() => {
+    const inputContent = { Component: "ms" } as IContent;
+    fetch("/api/content", {
+      method: "POST",
+      body: JSON.stringify(inputContent),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        if (response.status === "ok") {
+          const title = response.data.filter((item: IContent) => item.Component === "ms-title")[0];
+          setMsTitle(title);
+          setMsContents(response.data);
+          setSelectContent((prev) => {
+            if (prev) {
+              const updated = response.data.find((item: IContent) => item.Id === prev.Id);
+              return updated || response.data[1];
+            }
+            return response.data[1];
+          });
+        }
+      });
+  }, [refresh]);
 
   function handleClickMenu(e: any) {
     e.preventDefault();
@@ -38,28 +56,6 @@ const MsteamComponent = () => {
     document.getElementById("Tab3")?.classList.remove("menu-dropdown-show");
     document.getElementById("Tab4")?.classList.remove("menu-dropdown-show");
     document.getElementById("Tab5")?.classList.remove("menu-dropdown-show");
-  }
-
-  function fetchData(){
-    const inputContent = {} as IContent;
-    inputContent.Component = "ms";
-
-    useEffect(() => {
-      fetch("/api/content", {
-        method: "POST",
-        body: JSON.stringify(inputContent),
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((response) => {
-          if (response.status === "ok") {
-            const title = response.data.filter((item: IContent) => item.Component === "ms-title")[0];
-            setMsTitle(title);
-            setSelectContent(response.data[1]);
-            setMsContents(response.data);
-          }
-        });
-    }, []);
   }
 
   return (

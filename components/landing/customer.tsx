@@ -13,38 +13,28 @@ const Customer = () => {
   const [customerTitle, setCustomerTitle] = useState<IContent>();
   const [customerContents, setCustomerContents] = useState<IContent[]>([]);
 
-  init();
+  useEffect(() => {
+    const inputContent = { Component: "customer" } as IContent;
+    fetch("/api/content", {
+      method: "POST",
+      body: JSON.stringify(inputContent),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        if (response.status === "ok") {
+          const title = response.data.filter(
+            (item: IContent) => item.Component === "customer-title"
+          )[0];
+          setCustomerTitle(title);
 
-  function init() {
-    fetchData();
-  }
-
-  function fetchData() {
-    const inputContent = {} as IContent;
-    inputContent.Component = "customer";
-
-    useEffect(() => {
-      fetch("/api/content", {
-        method: "POST",
-        body: JSON.stringify(inputContent),
-        headers: { "Content-Type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((response) => {
-          if (response.status === "ok") {
-            const title = response.data.filter(
-              (item: IContent) => item.Component === "customer-title"
-            )[0];
-            setCustomerTitle(title);
-
-            const constents = response.data.filter(
-              (item: IContent) => item.Component === "customer-content"
-            );
-            setCustomerContents(constents);
-          }
-        });
-    }, [refresh]);
-  }
+          const constents = response.data.filter(
+            (item: IContent) => item.Component === "customer-content"
+          );
+          setCustomerContents(constents);
+        }
+      });
+  }, [refresh]);
 
   return (
     <div className="flex justify-center mt-0 md:mt-10">
