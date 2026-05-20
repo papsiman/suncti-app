@@ -58,6 +58,30 @@ function Product({ params }: { params: { slug: string } }) {
       });
   }, [refresh]);
 
+  const handleDownloadPDF = (item: IContent) => {
+    if (item.PdfBase64 || (item.Pdf && !item.Pdf.startsWith('data:'))) {
+      downloadPDF(item.PdfBase64 || item.Pdf!, item.Title!);
+      return;
+    }
+    fetch("/api/content/detail", {
+      method: "POST",
+      body: JSON.stringify({ Id: item.Id }),
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        if (response.status === "ok") {
+          const fullItem = response.data;
+          downloadPDF(fullItem.PdfBase64 || fullItem.Pdf!, fullItem.Title!);
+        } else {
+          alert("Failed to download PDF: " + response.message);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Failed to download PDF.");
+      });
+  };
 
   return (
     <>
@@ -88,13 +112,13 @@ function Product({ params }: { params: { slug: string } }) {
                             {item?.Des}
                           </p>
                         </div>
-                        {(item.Pdf || item.PdfBase64) && (
+                        {(item.Pdf || item.PdfBase64 || (item as any).HasPdfBase64) && (
                           <>
                             <div className="absolute w-full px-4 h-6 bg-red-500 bottom-4">
                               <div className="text-white">Download</div>
                             </div>
                             <div className="absolute p-2 bottom-2 border right-2 text-4xl card bg-white  cursor-pointer">
-                              <a onClick={()=>downloadPDF(item?.PdfBase64 ? item?.PdfBase64 : item?.Pdf!, item?.Title!)}
+                              <a onClick={()=>handleDownloadPDF(item)}
                                 className="text-red-500"
                               >
                                 <FontAwesomeIcon icon={faFilePdf} />

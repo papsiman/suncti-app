@@ -38,6 +38,22 @@ const MsteamComponent = () => {
       });
   }, [refresh]);
 
+  useEffect(() => {
+    if (selectContent?.Id && (selectContent as any).HasImgBase64 && !selectContent.ImgBase64 && !selectContent.Img) {
+      fetch("/api/content/detail", {
+        method: "POST",
+        body: JSON.stringify({ Id: selectContent.Id }),
+        headers: { "Content-Type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          if (response.status === "ok") {
+            setSelectContent(response.data);
+          }
+        });
+    }
+  }, [selectContent?.Id]);
+
   function handleClickMenu(e: any) {
     e.preventDefault();
     removeAll();

@@ -10,7 +10,25 @@ export async function POST(request: Request) {
             return Response.json({ status:'ok', message: '/api/content/update', data: res })
         }
         else{
-            const response = await execQuery("UPDATE `content` SET `Title` = '"+(res?.Title ?? "")+"',`Des` = '"+(res?.Des ?? "")+"', `Img` = '"+(res?.Img ?? "")+"', `ImgBase64` = '"+(res?.ImgBase64 ?? "")+"', `Pdf` = '"+(res?.Pdf ?? "")+"', `PdfBase64` = '"+(res?.PdfBase64 ?? "")+"', `Link` = '"+(res?.Link ?? "")+"' WHERE `Id` = '"+res.Id+"'");
+            const updates = [];
+            updates.push("`Title` = '"+(res?.Title ?? "")+"'");
+            updates.push("`Des` = '"+(res?.Des ?? "")+"'");
+            updates.push("`Link` = '"+(res?.Link ?? "")+"'");
+
+            if (res?.Img !== undefined && res?.Img !== "") {
+                updates.push("`Img` = '"+res.Img+"'");
+            }
+            if (res?.ImgBase64 !== undefined && res?.ImgBase64 !== "") {
+                updates.push("`ImgBase64` = '"+res.ImgBase64+"'");
+            }
+            if (res?.Pdf !== undefined && res?.Pdf !== "") {
+                updates.push("`Pdf` = '"+res.Pdf+"'");
+            }
+            if (res?.PdfBase64 !== undefined && res?.PdfBase64 !== "") {
+                updates.push("`PdfBase64` = '"+res.PdfBase64+"'");
+            }
+
+            const response = await execQuery("UPDATE `content` SET " + updates.join(", ") + " WHERE `Id` = '"+res.Id+"'");
             return Response.json({ status:'ok', message: '/api/content/update', data: res })
         }
     }
